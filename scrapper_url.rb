@@ -4,6 +4,7 @@ require 'nokogiri'
 def traer_items(url)
   items = []
   doc_html = Nokogiri::HTML(URI.open(url).read)
+  # Traer número de paginas del catalogo
   pt = doc_html.search('.pagination').first.attributes['data-tp'].value.to_i
   i = 1
   pt.times do
