@@ -84,7 +84,6 @@ def scrapping_items
       file.write({ data: data }.to_json)
     end
   end
-
 end
 
-puts scrapping_items
+scrapping_items
